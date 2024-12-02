@@ -2,7 +2,7 @@ const DAY_ROUTE = new URLPattern({ pathname: "/day/:day" });
 
 async function handler(req: Request): Promise<Response> {
   const day = DAY_ROUTE.exec(req.url)?.pathname.groups.day;
-  
+
   if (!day) {
     return new Response("Not found (try /day/1)", { status: 404 });
   }
