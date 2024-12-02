@@ -15,4 +15,4 @@ COPY . .
 # Compile the main app so that it doesn't need to be compiled each startup/entry.
 RUN deno install --entrypoint server.ts
 
-CMD ["run", "--allow-net", "--allow-read", "server.ts"]
+CMD ["run", "--allow-net", "--allow-read", "--allow-run", "server.ts"]
